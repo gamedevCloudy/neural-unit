@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib.pyplot as plt 
+
 
 def weighted_sum_with_bias(x,w,b): 
     return np.dot(x,w) +b
