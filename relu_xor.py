@@ -11,7 +11,7 @@ def xor_relu(a= 0,b= 0):
     # relu unit 1, bias 0
     z1 = np.dot(x1, w1) + 0
     a1 = relu(z1)
-
+    
     # relu unit 2, bias -1
     z2 = np.dot(x1, w1) -1
     a2 = relu(z2)
@@ -25,7 +25,6 @@ def xor_relu(a= 0,b= 0):
     z_final = np.dot(new_inps, new_weights) + 0
 
     y = relu(z_final)
-
     print(y)
 
 
