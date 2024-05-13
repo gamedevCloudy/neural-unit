@@ -22,7 +22,8 @@ def softmax(x):
     exps = np.exp(x- np.max(x))
     return exps/ np.sum(exps)
 
-
+def ine(x):
+    return 0
 #visualize all activation funcitons
 x_axis = np.linspace(-10, 10, 100)
 # activation functions
@@ -33,14 +34,15 @@ leaky_relu_output = leakyRelu(x_axis)
 softmax_output = softmax(x_axis)
 
 
-
+y_only = np.linspace(-10,10,100)
+x_zeros = np.zeros(100)
 
 plt.plot(x_axis, sigmoid(x_axis), label="Sigmoid")
 plt.plot(x_axis, tanH(x_axis), label="Tanh")
 plt.plot(x_axis, relu(x_axis), label="ReLU")
 plt.plot(x_axis, leakyRelu(x_axis), label="Leaky ReLU")
 plt.plot(x_axis, softmax(x_axis), label="Softmax")
-
+plt.plot(x_zeros, y_only)
 plt.xlabel("Input")
 plt.ylabel("Output")
 plt.legend()
